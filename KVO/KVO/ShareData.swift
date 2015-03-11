@@ -41,9 +41,9 @@ class ShareData: NSObject {
         }
     }
     
-    func removeClassObservers(observer:NSObject) {
+    func removeClassObservers(observer:NSObject,context:UnsafeMutablePointer<Void>) {
         for keyPath in ShareDataObserved.allValues {
-            removeObserver(observer, forKeyPath: keyPath.rawValue)
+            removeObserver(observer, forKeyPath: keyPath.rawValue, context: context)
         }
     }
     

@@ -24,7 +24,7 @@ class SecondViewController: UIViewController {
     }
 
     deinit {
-        share.removeClassObservers(self)
+        share.removeClassObservers(self, context: &myContext)
     }
     
     override func didReceiveMemoryWarning() {
